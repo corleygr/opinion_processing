@@ -26,10 +26,10 @@ public class FileProcessor
         {
             Console.WriteLine($"Processing File: {f}");
             var filename = Path.GetFileName(f);
-            var input = File.ReadAllText(f);
-            var output = _removePeriod.Execute(input);
+            var output = File.ReadAllText(f);
             output = _numberTransform.Execute(output);
             output = _singleCharTransform.Execute(output);
+            output = _removePeriod.Execute(output);
             File.WriteAllText(Path.Combine(_convertedPath,filename), output);
         }
     }
