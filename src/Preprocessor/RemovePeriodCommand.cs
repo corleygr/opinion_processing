@@ -11,7 +11,7 @@ public class RemovePeriodCommand:ICommand
        var tokens = tokenString.Split('|');
        foreach(var t in tokens)
        {
-           _transforms[t+"."] = t;
+           _transforms[$" {t}."] = $" {t}";
        }
     }
 
