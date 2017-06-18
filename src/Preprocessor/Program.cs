@@ -18,7 +18,7 @@ namespace Preprocessor
             var appSettings = builder.Build();
             var transforms = appSettings.GetSection("transforms");
 
-            FileProcessor fp = new FileProcessor(appSettings["originals"], appSettings["converted"], appSettings["tokens"]);
+            FileProcessor fp = new FileProcessor(appSettings["originals"], appSettings["converted"], appSettings["tokens"], appSettings["file"]);
             fp.Process();
         }
     }
