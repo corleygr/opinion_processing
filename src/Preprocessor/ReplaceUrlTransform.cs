@@ -12,7 +12,7 @@ public class ReplaceUrlTransform:ICommand
         var rgx = new Regex(_pattern);
         var output = rgx.Replace(data,"website");
         rgx = new Regex(_fileEndings);
-        output = rgx.Replace(data,"$1");
+        output = rgx.Replace(output,"$1");
         return output;
     }
 }
